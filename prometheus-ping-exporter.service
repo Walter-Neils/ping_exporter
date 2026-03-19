@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/prometheus-ping-exporter
+ExecStart=/usr/bin/prometheus-ping-exporter --config-path /etc/prometheus-ping-exporter.yaml
 Restart=always
 User=root
 Group=root
