@@ -1,0 +1,13 @@
+[Unit]
+Description=Prometheus ICMP Exporter
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/prometheus-ping-exporter
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
